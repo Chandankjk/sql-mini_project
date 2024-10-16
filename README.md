@@ -3,9 +3,6 @@
 # Objective :
 The objective of this project is to perform SQL queries on a schema, and demonstrate our understanding of SQL concepts and data analysis techniques. Also extract meaningful insights from the data and present our findings
 
-![image](https://github.com/Chandankjk/sql-mini_project/blob/main/02A916B2-26B3-4708-8199-8E3710429081.jpeg)
-
-
 ## Overview
 
 This project demonstrates our SQL  skills through the analysis of dataset for Zomato, a food delivery company in India. The project involves setting up the database, creating the tables, importing data in csv format to the tables, handling null values, and analyzing the data using complex SQL queries and try to get meaningful insights from these data.
@@ -17,70 +14,88 @@ This project demonstrates our SQL  skills through the analysis of dataset for Zo
 - **Data Cleaning:** Handling null values and ensuring data integrity.
 - **Data Analysis :** Using SQL queries to analyse the data in the tables.
 
-![ERD](https://github.com/najirh/zomato_sqlp3/blob/main/erd.png)
+## ER diagram (Entity-Relationship diagram) 
+This is a visual representation of the structure of the `zomato_db` database, showing the entities (tables), attributes (columns), and the relationships between entities
 
-## Database Setup
+![image](https://github.com/Chandankjk/sql-mini_project/blob/main/02A916B2-26B3-4708-8199-8E3710429081.jpeg)
+
+## Database Creation 
 ```sql
 CREATE DATABASE zomato_db;
+
+-- connect to zomato_db;
+USE zomato_db;
+
 ```
 
-### 1. Dropping Existing Tables
+### 1. Creating Tables
 ```sql
-DROP TABLE IF EXISTS deliveries;
-DROP TABLE IF EXISTS Orders;
-DROP TABLE IF EXISTS customers;
-DROP TABLE IF EXISTS restaurants;
-DROP TABLE IF EXISTS riders;
-
--- 2. Creating Tables
+-- Create restaurants table
 CREATE TABLE restaurants (
-    restaurant_id SERIAL PRIMARY KEY,
+    restaurant_id INT PRIMARY KEY,
     restaurant_name VARCHAR(100) NOT NULL,
     city VARCHAR(50),
     opening_hours VARCHAR(50)
 );
 
+-- Create customers table
 CREATE TABLE customers (
-    customer_id SERIAL PRIMARY KEY,
+    customer_id INT PRIMARY KEY,
     customer_name VARCHAR(100) NOT NULL,
     reg_date DATE
 );
 
-CREATE TABLE riders (
-    rider_id SERIAL PRIMARY KEY,
-    rider_name VARCHAR(100) NOT NULL,
-    sign_up DATE
-);
+-- Create Orders table
 
-CREATE TABLE Orders (
-    order_id SERIAL PRIMARY KEY,
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
     customer_id INT,
     restaurant_id INT,
     order_item VARCHAR(255),
     order_date DATE NOT NULL,
     order_time TIME NOT NULL,
     order_status VARCHAR(20) DEFAULT 'Pending',
-    total_amount DECIMAL(10, 2) NOT NULL,
+    total_amount FLOAT NOT NULL,
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
     FOREIGN KEY (restaurant_id) REFERENCES restaurants(restaurant_id)
 );
 
+
+-- Create riders table
+CREATE TABLE riders (
+    rider_id INT PRIMARY KEY,
+    rider_name VARCHAR(100) NOT NULL,
+    sign_up DATE
+);
+
+-- Create deliveries table
+
 CREATE TABLE deliveries (
-    delivery_id SERIAL PRIMARY KEY,
+    delivery_id INT PRIMARY KEY,
     order_id INT,
     delivery_status VARCHAR(20) DEFAULT 'Pending',
     delivery_time TIME,
     rider_id INT,
-    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
-    FOREIGN KEY (rider_id) REFERENCES riders(rider_id)
+    FOREIGN KEY (rider_id) REFERENCES riders(rider_id) 
 );
+-- order_id is a FK  in deliveries table , adding FK contraint 
+ALTER TABLE deliveries
+ADD CONSTRAINT fk_order_id
+FOREIGN KEY (order_id)
+REFERENCES orders(order_id);
+
+
+-- Schemas END
+
 ```
 
-## Data Import
+## Importing the data to the Table
+
+This is done using the "Table Data Import Wizard"
 
 ## Data Cleaning and Handling Null Values
 
-Before performing analysis, I ensured that the data was clean and free from null values where necessary. For instance:
+Before doing analysis on the table,
 
 ```sql
 UPDATE orders
