@@ -93,6 +93,29 @@ REFERENCES orders(order_id);
 
 This is done using the "Table Data Import Wizard"
 
+## Verifying that the data uploaded and tables have the data 
+
+```sql
+-- To check that ,the data uploaded ,following sql query used 
+select * from customers;
+select * from deliveries;
+select * from restaurants;
+select * from riders;
+select * from Orders;
+```
+# Showing the columns and data type information for all the tables 
+
+### Table Structure: `customers`
+
+| Column Name      | Data Type         | Null Allowed | Key    | Default Value | Extra |
+|------------------|-------------------|--------------|--------|---------------|-------|
+| `customer_id`     | `INT`             | NO           | PRI    | `NULL`        |       |
+| `customer_name`   | `VARCHAR(100)`    | NO           |        | `NULL`        |       |
+| `reg_date`        | `DATE`            | YES          |        | `NULL`        |       |
+
+
+
+
 ## Data Cleaning and Handling Null Values
 
 Before doing analysis on the table,
