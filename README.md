@@ -215,7 +215,9 @@ This section give aggrigated avg,min and max value for total_amount column for t
 |------|-------------|------------------|-----------|
 | 2024 | 317.76      | 217              | 495       |
 | 2023 | 322.83      | 199              | 750       |
-
+```sql
+SELECT COUNT(*) FROM orders;  -- Total 10000 rows or orders details 
+```
 ### 4. The riders table doesn't have a numerical column
 ```sql
 SELECT COUNT(*) FROM riders;  -- Total 34 riders in the table 
