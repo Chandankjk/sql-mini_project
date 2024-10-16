@@ -171,14 +171,49 @@ DESCRIBE deliveries;
 
 
 
-## Data Cleaning and Handling Null Values
-
-Before doing analysis on the table,
+## Handling Null Values
 
 ```sql
-UPDATE orders
-SET total_amount = COALESCE(total_amount, 0);
+-- Query to check NULL value. This is only done for the columns that do not have PRIMARY KEY or NULL Value constraint on it
+
+SELECT COUNT(*) FROM customers WHERE reg_date IS NULL;  -- return Zero
+SELECT COUNT(*) FROM restaurants WHERE city IS NULL OR opening_hours IS NULL;   -- return Zero
+SELECT COUNT(*) FROM orders WHERE order_item IS NULL OR order_status IS NULL; -- return Zero, not checking FK columns
+SELECT COUNT(*) FROM riders WHERE sign_up IS NULL;  -- return Zero
+SELECT COUNT(*) FROM deliveries WHERE delivery_status IS NULL OR delivery_time IS NULL; -- return Zero, not checking FK columns
+
+-- No NULL value found in tables so no remediation action is required 
+-- End of NULL value check 
 ```
+## Descriptive statistics such as count, sum, average, minimum, and maximum for numerical columns
+
+```sql
+### 1. The restaurant table doesn't have a numerical column, hence only counting the rows
+```sql
+SELECT COUNT(*) FROM restaurants; -- Total 71 Restaurants in table
+```
+### 2. customers table doesn't have a numerical column
+```sql
+SELECT COUNT(*) FROM customers; -- Total 33 customers in the table
+```
+### 3. orders table have total_amount as a numeric column
+```sql
+SELECT 
+    YEAR(order_date) AS order_year,
+    AVG(total_amount) AS avg_amount,
+    MIN(total_amount) AS min_amount,
+    MAX(total_amount) AS max_amount
+FROM 
+    orders
+GROUP BY 
+    YEAR(order_date);
+```
+### 4. The riders table doesn't have a numerical column
+```sql
+SELECT COUNT(*) FROM riders;  -- Total 34 riders in the table 
+```
+### 5. deliveries table doesn't have a numerical column 
+
 
 ## Exploratory Data Analysis
 
