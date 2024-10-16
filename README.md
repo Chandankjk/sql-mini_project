@@ -96,6 +96,17 @@ This is done using the "Table Data Import Wizard"
 ## Verifying that the data uploaded and tables have the data 
 
 ```sql
+use zomato_db;
+-- Displaying the different table information in zomato_db
+DESCRIBE customers;
+DESCRIBE restaurants;
+DESCRIBE orders;
+DESCRIBE riders;
+DESCRIBE deliveries;
+```
+# Showing the columns and data type information for all the tables 
+
+```sql
 -- To check that ,the data uploaded ,following sql query used 
 select * from customers;
 select * from deliveries;
@@ -103,7 +114,6 @@ select * from restaurants;
 select * from riders;
 select * from Orders;
 ```
-# Showing the columns and data type information for all the tables 
 
 ### Table Structure: `customers`
 
@@ -112,6 +122,49 @@ select * from Orders;
 | `customer_id`     | `INT`             | NO           | PRI    | `NULL`        |       |
 | `customer_name`   | `VARCHAR(100)`    | NO           |        | `NULL`        |       |
 | `reg_date`        | `DATE`            | YES          |        | `NULL`        |       |
+
+
+### Table Structure: `restaurants`
+
+| Column Name        | Data Type         | Null Allowed | Key    | Default Value | Extra |
+|--------------------|-------------------|--------------|--------|---------------|-------|
+| `city`             | `VARCHAR(50)`     | YES          |        | `NULL`        |       |
+| `opening_hours`    | `VARCHAR(50)`     | YES          |        | `NULL`        |       |
+| `restaurant_id`    | `INT`             | NO           | PRI    | `NULL`        |       |
+| `restaurant_name`  | `VARCHAR(100)`    | NO           |        | `NULL`        |       |
+
+### Table Structure: `orders`
+
+| Column Name        | Data Type         | Null Allowed | Key    | Default Value | Extra |
+|--------------------|-------------------|--------------|--------|---------------|-------|
+| `order_id`         | `INT`             | NO           | PRI    | `NULL`        |       |
+| `customer_id`      | `INT`             | YES          | MUL    | `NULL`        |       |
+| `restaurant_id`    | `INT`             | YES          | MUL    | `NULL`        |       |
+| `order_item`       | `VARCHAR(255)`    | YES          |        | `NULL`        |       |
+| `order_date`       | `DATE`            | NO           |        | `NULL`        |       |
+| `order_time`       | `TIME`            | NO           |        | `NULL`        |       |
+| `order_status`     | `VARCHAR(20)`     | YES          |        | `Pending`     |       |
+| `total_amount`     | `FLOAT`           | NO           |        | `
+
+### Table Structure: `riders`
+
+| Column Name      | Data Type         | Null Allowed | Key    | Default Value | Extra |
+|------------------|-------------------|--------------|--------|---------------|-------|
+| `rider_id`       | `INT`             | NO           | PRI    | `NULL`        |       |
+| `rider_name`     | `VARCHAR(100)`    | NO           |        | `NULL`        |       |
+| `sign_up`        | `DATE`            | YES          |        | `NULL`        |       |
+
+### Table Structure: `deliveries`
+
+
+| Column Name        | Data Type         | Null Allowed | Key    | Default Value | Extra |
+|--------------------|-------------------|--------------|--------|---------------|-------|
+| `delivery_id`      | `INT`             | NO           | PRI    | `NULL`        |       |
+| `order_id`         | `INT`             | YES          | MUL    | `NULL`        |       |
+| `delivery_status`   | `VARCHAR(20)`     | YES          |        | `Pending`     |       |
+| `delivery_time`    | `TIME`            | YES          |        | `NULL`        |       |
+| `rider_id`        | `INT`             | YES          | MUL    | `NULL`        |       |
+
 
 
 
