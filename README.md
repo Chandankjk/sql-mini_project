@@ -93,6 +93,17 @@ REFERENCES orders(order_id);
 
 This is done using the "Table Data Import Wizard"
 
+# Showing the columns and data type information for all the tables 
+
+```sql
+-- To check that ,the data uploaded ,following sql query used 
+select * from customers;
+select * from deliveries;
+select * from restaurants;
+select * from riders;
+select * from Orders;
+```
+
 ## Verifying that the data uploaded and tables have the data 
 
 ```sql
@@ -104,16 +115,7 @@ DESCRIBE orders;
 DESCRIBE riders;
 DESCRIBE deliveries;
 ```
-# Showing the columns and data type information for all the tables 
 
-```sql
--- To check that ,the data uploaded ,following sql query used 
-select * from customers;
-select * from deliveries;
-select * from restaurants;
-select * from riders;
-select * from Orders;
-```
 
 ### Table Structure: `customers`
 
