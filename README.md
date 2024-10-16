@@ -1,15 +1,21 @@
-# SQL Project: Data Analysis for Zomato - A Food Delivery Company
+# GROUP 11
+# SQL mini Project: Data Analysis for Zomato dataset using MySql workbench
+# Objective :
+The objective of this project is to perform SQL queries on a schema, and demonstrate our understanding of SQL concepts and data analysis techniques. Also extract meaningful insights from the data and present our findings
+
+![image](https://github.com/user-attachments/assets/35f0a2d8-ff14-4557-9c3d-665cdd3c420c)
+
 
 ## Overview
 
-This project demonstrates my SQL problem-solving skills through the analysis of data for Zomato, a popular food delivery company in India. The project involves setting up the database, importing data, handling null values, and solving a variety of business problems using complex SQL queries.
+This project demonstrates our SQL  skills through the analysis of dataset for Zomato, a food delivery company in India. The project involves setting up the database, creating the tables, importing data in csv format to the tables, handling null values, and analyzing the data using complex SQL queries and try to get meaningful insights from these data.
 
 ## Project Structure
 
 - **Database Setup:** Creation of the `zomato_db` database and the required tables.
 - **Data Import:** Inserting sample data into the tables.
 - **Data Cleaning:** Handling null values and ensuring data integrity.
-- **Business Problems:** Solving 20 specific business problems using SQL queries.
+- **Data Analysis :** Using SQL queries to analyse the data in the tables.
 
 ![ERD](https://github.com/najirh/zomato_sqlp3/blob/main/erd.png)
 
