@@ -187,7 +187,6 @@ SELECT COUNT(*) FROM deliveries WHERE delivery_status IS NULL OR delivery_time I
 ```
 ## Descriptive statistics such as count, sum, average, minimum, and maximum for numerical columns
 
-```sql
 ### 1. The restaurant table doesn't have a numerical column, hence only counting the rows
 ```sql
 SELECT COUNT(*) FROM restaurants; -- Total 71 Restaurants in table
