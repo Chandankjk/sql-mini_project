@@ -3,7 +3,7 @@
 # Objective :
 The objective of this project is to perform SQL queries on a schema, and demonstrate our understanding of SQL concepts and data analysis techniques. Also extract meaningful insights from the data and present our findings
 
-![image](https://github.com/user-attachments/assets/35f0a2d8-ff14-4557-9c3d-665cdd3c420c)
+![image](https://github.com/Chandankjk/sql-mini_project/blob/main/02A916B2-26B3-4708-8199-8E3710429081.jpeg)
 
 
 ## Overview
