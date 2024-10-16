@@ -209,9 +209,9 @@ GROUP BY
 ```
 
 
-This section give aggrigated avg,min and max value for total_amount column for the years 2023 and 2024.
+This section gives aggregated avg, min and max values for total_amount column for the years 2023 and 2024.
 
-| Year | avg_ampont  | min_amount       | max_amount|
+| Year | avg_amount  | min_amount       | max_amount|
 |------|-------------|------------------|-----------|
 | 2024 | 317.76      | 217              | 495       |
 | 2023 | 322.83      | 199              | 750       |
