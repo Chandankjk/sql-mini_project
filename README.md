@@ -93,7 +93,7 @@ REFERENCES orders(order_id);
 
 This is done using the "Table Data Import Wizard"
 
-# Showing the columns and data type information for all the tables 
+## Verifying that the data uploaded and tables have the data 
 
 ```sql
 -- To check that ,the data uploaded ,following sql query used 
@@ -104,8 +104,8 @@ select * from riders;
 select * from Orders;
 ```
 
-## Verifying that the data uploaded and tables have the data 
 
+# Showing the columns and data type information for all the tables 
 ```sql
 use zomato_db;
 -- Displaying the different table information in zomato_db
