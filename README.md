@@ -207,13 +207,23 @@ FROM
 GROUP BY 
     YEAR(order_date);
 ```
+
+
+This section give aggrigated avg,min and max value for total_amount column for the years 2023 and 2024.
+
+| Year | avg_ampont  | min_amount       | max_amount|
+|------|-------------|------------------|-----------|
+| 2024 | 317.76      | 217              | 495       |
+| 2023 | 322.83      | 199              | 750       |
+
 ### 4. The riders table doesn't have a numerical column
 ```sql
 SELECT COUNT(*) FROM riders;  -- Total 34 riders in the table 
 ```
 ### 5. deliveries table doesn't have a numerical column 
-
-
+```sql
+SELECT COUNT(*) FROM deliveries;  -- Total 9750 deliveries data in the table
+```
 ## Exploratory Data Analysis
 
 ### 1. Write a query 
