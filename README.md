@@ -18,6 +18,8 @@ This project demonstrates our SQL  skills through the analysis of dataset for Zo
 This is a visual representation of the structure of the `zomato_db` database, showing the entities (tables), attributes (columns), and the relationships between entities
 
 ![image](https://github.com/Chandankjk/sql-mini_project#:~:text=ERD_mini_project.jpg)
+![ERD mini project](https://raw.githubusercontent.com/Chandankjk/sql-mini_project/main/ERD_mini_project.jpg)
+
 
 ## Database Creation 
 ```sql
