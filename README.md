@@ -247,8 +247,12 @@ SELECT COUNT(*) FROM deliveries;  -- Total 9750 deliveries data in the table
 
 ## Future enhancement
 
-1. Automate the csv file upload to mysql database in tables , the automation will have steps to create the query to connect the database and also populate the scv data in table
-2. Pyhton code to get the data from the query to dataset and once the data set have the data use the matplotlib and seaborn libraries to visualise the query data 
+1. Automate the process of uploading CSV files into MySQL tables by using Python’s mysql-connector which will have following steps :
+       a. Use Python’s mysql-connector library to establish a connection to MySQL database.
+       b. Write a function to dynamically generate the SQL CREATE TABLE query based on the structure of the CSV file
+       c. Write a function to insert the CSV data into the newly created table.
+       d. Implement exception handling to deal with issues such as database connectivity problems, duplicate tables, etc.
+2. Also querying data from MySQL, converting it into a Pandas DataFrame, and visualizing it using matplotlib and seaborn.
 
 ## Notice 
 All customer names and data used in this project are 'made up' data. They do not represent real data associated with Zomato and any resemblance to actual persons is purely coincidental.
