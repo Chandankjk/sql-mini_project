@@ -17,7 +17,7 @@ This project demonstrates our SQL  skills through the analysis of dataset for Zo
 ## ER diagram (Entity-Relationship diagram) 
 This is a visual representation of the structure of the `zomato_db` database, showing the entities (tables), attributes (columns), and the relationships between entities
 
-![image](https://github.com/Chandankjk/sql-mini_project/blob/main/02A916B2-26B3-4708-8199-8E3710429081.jpeg)
+![image](https://github.com/Chandankjk/sql-mini_project#:~:text=ERD_mini_project.jpg)
 
 ## Database Creation 
 ```sql
