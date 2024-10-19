@@ -596,10 +596,18 @@ GROUP BY month, order_status;
 ### 6. Rider Efficiency Analysis :
          a. Top 3 riders who did most of the delivery, they can be delivery stars for the year and can be provided with some extra benefits
          b. We identified riders with delayed deliveries, Considering if they are not able to deliver within one hour after the order is placed
-         c. we also calculated top 5 riders defaulted or missed the one-hour SLA most number of times , these riders can be addressed for the making SLA miss or a root cause analysis can be done of delay 
+         c. we also calculated top 5 riders defaulted or missed the one-hour SLA most number of times, these riders can be addressed for the making SLA miss or a root cause analysis can be done of delay 
         by interviewing them 
 ### 7. Order Item Analysis :
-         a. 
+         a. We analyzed the most popular items ordered from all restaurants , Chicken Biryani is the most ordered item, followed by Paneer Butter Masala 
+	 b. We analyzed popular dishes by city 
+  		-- This gives us the most ordered item by city 
+		-- Bengaluru - Chicken Biryani
+		-- Hyderabad - Chicken Biryani 
+		-- Chennai - Mutton Rogan Josh 
+		-- Delhi and Mumbai  - Paneer Butter Masala 
+  	c. We also track the popularity of specific order items over time and identify seasonal demand spikes, there is no effect for chicken biryani or dosa on seasons 
+   
 ## Future enhancement
 
 #### 1.  Automate the process of uploading CSV files into MySQL tables by using Python’s mysql-connector which will have the following steps :
