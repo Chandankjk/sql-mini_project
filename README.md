@@ -244,7 +244,45 @@ SELECT COUNT(*) FROM deliveries;  -- Total 9750 deliveries data in the table
 
 ## Insights and Conclusions
 
-
+## Insights and Conclusions
+1. Customer Activity Analysis
+   a. By doing customer analysis we got to know who are our most valued customers, what each customer is spending, what are the min, max and avg of their spending.
+   b. we got to know the most active customers on the platform, who placed orders more than the average number of orders by all customers
+   c. We also labeled the customers as platinum, gold, and silver of this food delivery platform based on their spending, these customers can be given customized offers
+   
+3. Restaurant Performance Analysis
+   a. Here  we analyzed which restaurants perform best in terms of orders and revenue
+   b. We got to know some restaurants did not take any orders, maybe they have closed or there is a possibility that they stopped using the Zomato platform
+   c. Based on the total revenue generated, we ranked the restaurants, these restaurants can be given discounts on platform charges or any other benefits by the platform
+   d. We also calculated the busiest day for every restaurant, based on this data restaurants can plan their operation, staffing, and inventory
+    
+5. Delivery Time and Status Analysis
+   a. In this section by querying the table our focus was to understand delivery patterns and identify any issues with delivery performance.
+   b. We quickly know how many orders are "Delivered", "Not delivered" or in the "Order" state
+   c. By querying total deliveries per rider we got to know top delivery persons, the platform can give them extra benefits or commission on crossing a certain number of delivery
+   d. Also some riders left the platform, as they did not have any deliveries
+   e. We got to know the number of orders that were not delivered, also give the restaurant name and city and number of orders not delivered based on this data platform can try to interview these 
+      restaurants and try to find the root cause of the issue
+   
+7. Order Trends Over Time
+   a. Here we discovered ordering patterns over different periods, which year and month the platform received how many orders
+   b. In 2024 the data is just from Jan, so we can ignore jan-2024
+   c. Zomato got most order in Oct-2023 , followed by Mar-2023 and July-2023
+   d. By analyzing orders per week we got to know, that Sunday is most busiest day for the platform as they get more orders on Sunday than any other day
+   e. By analyzing orders by hours, we got to know Restaurants gets more orders in 2nd half of the day
+   f. During lunchtime at 2 PM - 3 PM, they get the most orders, also during the 7 PM also there is high amount of orders for restaurants
+   
+9. Revenue Analysis
+    a. By analyzing total revenue per month, restaurants generated more  revenue  in March, October, and July of 2023
+    b. By querying the revenue by city, we got to know Restaurants of Mumbai generated more revenue followed by Bangalore and the Delhi and Hyderabad
+   
+11. Rider Efficiency Analysis
+     a. Top 3 riders who did most of the delivery, they can be delivery stars for the year and can be provided with some extra benefits
+     b. We identified riders with delayed deliveries, Considering if they are not able to deliver within one hour after the order is placed
+     c. we also calculated top 5 riders defaulted or missed the one-hour SLA most number of times , these riders can be addressed for the making SLA miss or a root cause analysis can be done of delay 
+        by interviewing them 
+13. Order Item Analysis
+    a. 
 ## Future enhancement
 
 #### 1.  Automate the process of uploading CSV files into MySQL tables by using Python’s mysql-connector which will have following steps :
